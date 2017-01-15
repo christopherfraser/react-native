@@ -103,7 +103,7 @@ The debugger will receive a list of all project roots, separated by a space. For
    compile 'com.facebook.stetho:stetho-okhttp3:1.3.1'
    ```
 
-2. In ```android/app/src/main/java/com/{yourAppName}/MainApplication.java```, add the following imports: 
+2. In ```android/app/src/main/java/com/{yourAppName}/MainActivity.java```, add the following imports: 
 
    ```java
    import android.os.Bundle;
@@ -115,8 +115,9 @@ The debugger will receive a list of all project roots, separated by a space. For
    import java.util.concurrent.TimeUnit;
    ```
 
-3. In ```android/app/src/main/java/com/{yourAppName}/MainApplication.java``` add the function:
+3. In ```android/app/src/main/java/com/{yourAppName}/MainActivity.java``` add the function:
    ```java
+   @Override
    public void onCreate(Bundle savedInstanceState) {
          super.onCreate(savedInstanceState);
          Stetho.initializeWithDefaults(this);
